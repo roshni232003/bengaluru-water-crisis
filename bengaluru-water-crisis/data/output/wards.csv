@@ -1,0 +1,41 @@
+ward_id,ward_name,lat,lon,zone
+1,Whitefield,12.9698,77.75,East
+2,Mahadevapura,12.9902,77.696,East
+3,Marathahalli,12.9591,77.6974,East
+4,KR Puram,13.0088,77.6959,East
+5,Bellandur,12.926,77.6784,East
+6,HSR Layout,12.9121,77.6446,South-East
+7,Koramangala,12.9352,77.6245,South-East
+8,BTM Layout,12.9166,77.6101,South
+9,JP Nagar,12.9077,77.5906,South
+10,Jayanagar,12.9308,77.5838,South
+11,Banashankari,12.9255,77.5468,South
+12,Basavanagudi,12.9422,77.5738,South
+13,Electronic City,12.8452,77.6602,South-East
+14,Bommanahalli,12.901,77.6135,South-East
+15,Hebbal,13.0358,77.597,North
+16,Yelahanka,13.1007,77.5963,North
+17,RT Nagar,13.023,77.595,North
+18,Malleshwaram,13.0035,77.5709,Central
+19,Rajajinagar,12.999,77.555,Central
+20,Vijayanagar,12.9719,77.534,West
+21,Basaveshwaranagar,12.9886,77.535,West
+22,RR Nagar,12.926,77.518,West
+23,Kengeri,12.9081,77.4855,West
+24,Nagarbhavi,12.9596,77.506,West
+25,Peenya,13.028,77.52,North-West
+26,Yeshwanthpur,13.023,77.554,North-West
+27,CV Raman Nagar,12.988,77.664,East
+28,Indiranagar,12.9719,77.6412,Central-East
+29,Ulsoor,12.9815,77.622,Central
+30,Shivajinagar,12.9857,77.6057,Central
+31,Domlur,12.961,77.6387,Central-East
+32,Sarjapur Road,12.901,77.687,South-East
+33,Varthur,12.9412,77.7409,East
+34,Hennur,13.045,77.635,North-East
+35,Banaswadi,13.014,77.651,North-East
+36,Vidyaranyapura,13.068,77.556,North
+37,Jalahalli,13.045,77.547,North-West
+38,Chikkabanavara,13.068,77.503,North-West
+39,Uttarahalli,12.899,77.551,South
+40,Begur,12.872,77.63,South
