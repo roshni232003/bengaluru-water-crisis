@@ -1,4 +1,4 @@
-const API_BASE = "/api"; // relative — works locally and on any deployed domain
+const API_BASE = "https://bengaluru-water-crisis-6.onrender.com/api"; // relative — works locally and on any deployed domain
 
 const RISK_COLORS = {
   Low: "#2fb8a6",
