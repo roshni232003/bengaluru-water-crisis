@@ -1,0 +1,10 @@
+feature,importance
+rainfall_3mo_avg,0.30499426
+month,0.27971905
+groundwater_depth_m,0.12749365
+population_density,0.09107901
+tanker_price_inr,0.059858453
+avg_temp_c,0.04667524
+rainfall_mm,0.04029088
+complaint_count,0.032851186
+groundwater_trend,0.01703828

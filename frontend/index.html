@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neeru Nadi — Bengaluru Water Crisis Monitor</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">ನೀ</span>
+    <div class="brand-text">
+      <h1>Neeru Nadi</h1>
+      <p>ward-level water scarcity monitor · Bengaluru</p>
+    </div>
+  </div>
+  <div class="topbar-stats" id="topbar-stats">
+    <div class="stat">
+      <span class="stat-label">City avg risk</span>
+      <span class="stat-value" id="stat-avg">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Peak risk</span>
+      <span class="stat-value" id="stat-max">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Critical wards</span>
+      <span class="stat-value stat-critical" id="stat-critical">—</span>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="map-panel">
+    <div id="map"></div>
+    <div class="legend" id="legend">
+      <span class="legend-title">Risk score · click to filter</span>
+      <div class="legend-scale">
+        <button class="legend-btn" data-label="Low"><span class="legend-chip" style="background:#2fb8a6"></span>Low</button>
+        <button class="legend-btn" data-label="Medium"><span class="legend-chip" style="background:#d9a441"></span>Medium</button>
+        <button class="legend-btn" data-label="High"><span class="legend-chip" style="background:#d16a3a"></span>High</button>
+        <button class="legend-btn" data-label="Critical"><span class="legend-chip" style="background:#c23a34"></span>Critical</button>
+      </div>
+    </div>
+    <div class="month-badge" id="month-badge">viewing latest data<span id="reset-month" class="reset-link"></span></div>
+  </section>
+
+  <aside class="detail-panel" id="detail-panel">
+    <div class="detail-empty" id="detail-empty">
+      <p class="eyebrow">select a ward</p>
+      <p class="hint">Click any marker on the map to see its water stress trend, forecast, and drivers.</p>
+    </div>
+
+    <div class="detail-content" id="detail-content" style="display:none">
+      <div class="detail-head">
+        <h2 id="d-name">—</h2>
+        <span class="zone-pill" id="d-zone">—</span>
+      </div>
+
+      <div class="risk-now">
+        <div class="risk-badge" id="d-risk-badge">
+          <span id="d-risk-score">—</span>
+          <span class="risk-badge-label" id="d-risk-label">—</span>
+        </div>
+        <div class="forecast">
+          <span class="forecast-label">next month forecast</span>
+          <span class="forecast-value" id="d-forecast">—</span>
+        </div>
+      </div>
+
+      <div class="metric-row">
+        <div class="metric">
+          <span class="metric-label">Groundwater depth</span>
+          <span class="metric-value" id="d-groundwater">—</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Tanker price</span>
+          <span class="metric-value" id="d-tanker">—</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Rainfall (latest)</span>
+          <span class="metric-value" id="d-rainfall">—</span>
+        </div>
+      </div>
+
+      <div class="chart-wrap">
+        <p class="chart-title">24-month risk trend</p>
+        <canvas id="trend-chart" height="160"></canvas>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<section class="scrubber-panel">
+  <p class="chart-title">City-wide risk by month · click a bar to see that month on the map</p>
+  <canvas id="scrubber-chart" height="90"></canvas>
+</section>
+
+<footer class="footer-note">
+  Synthetic demo dataset modeled on real 2023–24 Bengaluru groundwater &amp; tanker-price patterns · XGBoost risk model, R² 0.85 on held-out data
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
