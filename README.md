@@ -9,6 +9,9 @@ risk score — with an interactive map dashboard and a Power BI executive view.
 > docstring). Swap in real OpenWeatherMap / India-WRIS API calls using the same
 > pipeline for a production version — the architecture doesn't change.
 
+🔗 **Live Demo:** https://roshni232003.github.io/bengaluru-water-crisis/
+🔗 **API Backend:** https://bengaluru-water-crisis-6.onrender.com/app/
+
 ## Stack
 
 | Layer | Tech |
